@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CompressCBRCBZ": {
+      "commandName": "Project",
+      "commandLineArgs": "\"-input:F:\\Anime\\Manga\\Pruebas\\Prueba.cbr\""
+    }
+  }
+}
