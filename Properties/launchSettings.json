@@ -2,7 +2,7 @@
   "profiles": {
     "CompressCBRCBZ": {
       "commandName": "Project",
-      "commandLineArgs": "\"-input:F:\\Anime\\Manga\\Pruebas\\Prueba.cbr\" \"-output:F:\\Anime\\Manga\\Pruebas\\Prueba1.cbz\" \"-calidad:25\" \"-PPI:48\""
+      "commandLineArgs": "\"-input:F:\\Anime\\Manga\\Pruebas\\Prueba.cbr\""
     }
   }
 }
