@@ -102,22 +102,41 @@ internal class Program
             return;
         }
 
+        Console.WriteLine("Los argumentos han sido cargados correctamente.");
+
+        Console.WriteLine("Se generara el archivo de salida " + mangaFile.outputPathCompleto);
+
+        Console.WriteLine("");
+
+        Console.WriteLine("Creando las carpetas temporales...");
         // Crear las carpetas temporales
         Tooling.CrearCarpeta(mangaFile.inputTempPath);
         Tooling.CrearCarpeta(mangaFile.outputTempPath);
 
+        Console.WriteLine("Extrayendo las imagenes...");
         // Extraes las imagenes a la carpeta de uso temporal
         Tooling.Extraer(mangaFile);
 
+        if (!(mangaFile.calidad == 100 && mangaFile.resolucionPPI == null))
+        {
+            Console.WriteLine("Comprimiendo las imagenes...");
+        } 
+        else
+        {
+            Console.WriteLine("Moviendo las imagenes...");
+        }
         // Comprime las imagenes dentro de Input, las coloca en Output
         Tooling.ComprimirImagenes(mangaFile);
 
+        Console.WriteLine("Creando el archivo cbz de salida...");
         // Crea el cbz final
         Tooling.Comprimir(mangaFile);
 
+        Console.WriteLine("Eliminando las carpetas temporales...");
         // Borrar las carpetas temporales
         Tooling.BorrarCarpeta(mangaFile.TempPath);
 
+        Console.WriteLine("Proceso finalizado.");
     }
 
 }
