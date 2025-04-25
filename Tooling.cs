@@ -6,6 +6,7 @@ using System.Drawing.Imaging;
 using SharpCompress;
 using SharpCompress.Archives.Rar;
 using SharpCompress.Readers;
+using System.Collections.Generic;
 
 namespace CompressCBRCBZ
 {

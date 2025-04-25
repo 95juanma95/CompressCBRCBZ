@@ -25,7 +25,6 @@ internal class Program
         {
             Console.WriteLine("No se han enviado los argumentos. Usar el argumento \"-help\" para mas información");
             Console.WriteLine("Ejemplo: \"-help\"");
-            Console.ReadLine();
             return;
         }
 
@@ -47,7 +46,6 @@ internal class Program
                 Console.WriteLine(" \"-PPI\": Opcional. Cantidad de Pixel Per Inch de la imagen a transformar.");
                 Console.WriteLine(" \tEjemplo: \"-PPI:48\"");
                 Console.WriteLine(" Ejemplo de uso: \"-input:C:\\Comics\\Prueba.cbr\" \"-output:C:\\Comics\\Prueba.cbz\" \"-calidad:25\" \"-PPI:48\"");
-                Console.ReadLine();
                 return;
             }
 
@@ -74,7 +72,6 @@ internal class Program
                     break;
                 default:
                     Console.WriteLine("Se han cargado incorrectamente los argumentos. Usar \"-help\" para obtener mas información");
-                    Console.ReadLine();
                     return;
             }
 
@@ -98,7 +95,6 @@ internal class Program
         if (!mangaFile.CargadoCorrectamente())
         {
             Console.WriteLine("Se han cargado incorrectamente los argumentos. Usar \"-help\" para obtener mas información");
-            Console.ReadLine();
             return;
         }
 
